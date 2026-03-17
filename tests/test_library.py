@@ -41,7 +41,7 @@ def test_library_readonly_scope_module(library_readonly):
     assert library_readonly.get_available_count() == 5
 
 def test_library_readonly_scope_module_2(library_readonly):
-    print(f"ID: {id(library_readonly)}")  # тот же ID!
+    print(f"ID: {id(library_readonly)}")
     assert len(library_readonly.books) == 5
     assert library_readonly.get_available_count() == 5
 
@@ -51,7 +51,7 @@ def test_empty_library_scope_function(empty_library):
     assert empty_library.get_available_count() == 0
 
 def test_empty_library_scope_function_2(empty_library):
-    print(f"ID: {id(empty_library)}")  # другой ID!
+    print(f"ID: {id(empty_library)}")
     assert len(empty_library.books) == 0
     assert empty_library.get_available_count() == 0
 
@@ -63,7 +63,7 @@ def test_issue_return_book(library):
     assert library.get_available_count() == 2  # 3-1=2
     assert library.get_issued_count() == 1
     library.return_book(title)
-    assert library.get_available_count() == 3  # восстановлено
+    assert library.get_available_count() == 3
 
 def test_issue_return_book_2(library):
     title = "1984"
